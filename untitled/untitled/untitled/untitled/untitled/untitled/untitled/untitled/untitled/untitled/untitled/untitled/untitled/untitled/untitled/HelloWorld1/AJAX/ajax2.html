@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function loadXMLdoc() {
+            //创建XMLHttpRequest对象
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }else {
+
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+            }
+            xmlhttp.onreadystatechange =  function () {
+                if (xmlhttp.readyState ==4 && xmlhttp.status==200){
+                    document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                }
+            }
+            //向服务器发送请求
+            //open() 方法的 url 参数是服务器上文件的地址：
+            xmlhttp.open("GET","test1.txt",true);
+            xmlhttp.send();
+
+            //2 post
+            xmlhttp.open,"/ajax/demo_post2.asp",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("fname=bill&lname=Gates");
+
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+//xmlhttprequest

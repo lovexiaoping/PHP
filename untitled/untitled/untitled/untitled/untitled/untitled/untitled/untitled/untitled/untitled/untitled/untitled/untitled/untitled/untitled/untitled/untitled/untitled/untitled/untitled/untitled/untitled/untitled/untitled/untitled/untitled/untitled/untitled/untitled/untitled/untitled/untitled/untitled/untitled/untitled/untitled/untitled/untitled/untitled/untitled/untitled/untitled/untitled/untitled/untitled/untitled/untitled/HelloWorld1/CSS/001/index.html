@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纯CSS3实现图片复古效果在线演示</title>
+    <style>
+        figure {
+
+            box-shadow: inset 0 0 100px #1e0f13;
+            background: #ff0000;
+            width: 500px;
+            height: 338px;
+
+        }
+        figure img {
+            -webkit-filter:sepia(0.2) brightness(1.1) contrast(1.3);
+            transition:-webkit-filter 0.3s ease-in-out;
+            position:relative; z-index:-1;
+        }
+
+        figure:hover { background:none; }
+        figure:hover img { -webkit-filter:sepia(0) brightness(1) contrast(1); }
+
+        /* BLAH BLAH */
+        body { background:url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png) repeat; }
+        figure { margin:20px auto; }
+
+
+    </style>
+
+</head>
+<body>
+
+
+<figure>
+    <img src="css/7226439182_756e2b00e6.jpg" alt="">
+</figure>
+
+<div style="text-align: center; clear: both">
+    <script src="" type="text/javascript"></script>
+    <script src="" type="text/javascript"></script>
+</div>
+
+<script src=""></script>
+
+
+</body>
+</html>

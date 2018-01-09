@@ -1,0 +1,50 @@
+
+<!--HTML 中的脚本必须位于 <script> 与 </script> 标签之间。-->
+<!--脚本可被放置在 HTML 页面的 <body> 和 <head> 部分中。-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    //外部的javaScript
+    <script src="myTest.js"></script>
+
+
+    <script>
+        function mytestJSfunc() {
+            x = document.getElementById("p_id1");
+
+            x.style.color = "#ff0000";
+
+        }
+
+    </script>
+</head>
+<body>
+
+
+<p id="p_id">js 能够直接写入HTML输出流中</p>
+<p id="p_id1">js 能够直接写入HTML输出流中</p>
+<script>document.write("<h1> this is a heading</h1>")</script>
+
+
+
+<!--JavaScript：对事件作出反应-->
+<button type="button" onclick="alert('welcome')"> 按钮 </button>
+<button type="button" onclick="myFunction()"> 按钮2 </button>
+
+
+<!--JavaScript：改变 HTML 内容-->
+
+<script>
+    function myFunction() {
+        x = document.getElementById("p_id");
+        x.innerHTML = "hello gogogog";
+    }
+</script>
+</body>
+</html>
